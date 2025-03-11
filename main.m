@@ -7,7 +7,7 @@ function [R1, R2, mae1, mae2, mbe1, mbe2, error1, error2] = main()
     %% 数据准备
     res = xlsread('predict.xls');
     numRows = size(res, 1);
-    train_size = min(2936, numRows - 1);
+    train_size = min(2936, numRows - 1);%总样本数的60%-70%
     
     P_train = res(1:train_size, 1:16)';
     T_train = res(1:train_size, 17)';
